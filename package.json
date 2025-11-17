@@ -1,0 +1,39 @@
+{
+  "name": "akshon-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool built with TypeScript and yargs",
+  "main": "dist/index.js",
+  "bin": {
+    "akshon": "bin/akshon"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "ts-node src/cli/index.ts",
+    "start": "node dist/cli/index.js",
+    "pack": "mkdir -p out && npm pack --pack-destination out"
+  },
+  "keywords": [
+    "cli",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "sscaff": "^2.0.388",
+    "yargs": "^17.7.2",
+    "yaml": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.0",
+    "@types/yargs": "^17.0.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

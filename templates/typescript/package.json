@@ -1,0 +1,16 @@
+{
+  "name": "{{PROJECT_NAME}}",
+  "version": "0.1.0",
+  "main": "main.ts",
+  "scripts": {
+    "build": "tsc",
+    "synth": "akshon synth"
+  },
+  "dependencies": {
+    "akshon": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
