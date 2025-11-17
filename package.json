@@ -8,14 +8,14 @@
   },
   "files": [
     "bin",
-    "dist",
+    "lib",
     "templates"
   ],
   "scripts": {
     "build": "tsc --build",
     "dev": "ts-node src/cli/index.ts",
     "start": "node dist/cli/index.js",
-    "pack": "mkdir -p out && npm pack --pack-destination out"
+    "pack": "mkdir -p dist && npm pack --pack-destination dist"
   },
   "keywords": [
     "cli",

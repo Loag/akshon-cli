@@ -1,15 +1,25 @@
-import { Construct } from 'constructs';
-import { App, Chart } from 'cdk8s';
+import { Workflow, Job, Step, Action, synth, actions } from 'akshon';
 
-class MyChart extends Chart {
-  constructor(scope: Construct, id: string, props: {}) {
-    super(scope, id, props);
+const workflowProps = {
+  name: 'build',
+  on: {
+    push: {
+      branches: ['main'],
+    },
+  },
+};
 
-    // define resources here
-  }
-}
+const workflow = new Workflow(workflowProps);
 
-const app = new App();
-new MyChart(app, 'my-chart');
-app.synth();
+const buildJob = new Job(workflow, 'build', {
+  runsOn: 'ubuntu-latest',
+  name: 'Build',
+});
 
+actions.checkoutV5(buildJob)
+
+
+
+workflow.addJob('build', buildJob);
+
+const yaml = synth(workflow);
