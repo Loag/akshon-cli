@@ -48,7 +48,7 @@ const publish =
   'NAME=$(jq -r \'.name\' package.json)\n' +
   'VERSION=$(jq -r \'.version\' package.json)\n' +
   'UNSCOPED_NAME=$(echo "$NAME" | sed \'s/.*\\///\')\n' +
-  'TARBALL="dist/${UNSCOPED_NAME}-${VERSION}.tgz"\n' +
+  'TARBALL="./dist/${UNSCOPED_NAME}-${VERSION}.tgz"\n' +
   'echo "Tarball is: $TARBALL"\n' +
   'npm publish "$TARBALL"\n';
 
