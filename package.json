@@ -21,8 +21,18 @@
     "cli",
     "typescript"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Loag"
+  },
+  "bugs": {
+    "url": "https://github.com/Loag/akshon-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loag/akshon-cli.git"
+  },
+  "homepage": "https://github.com/Loag/akshon-cli#readme",
+  "license": "Apache-2.0",
   "dependencies": {
     "fs-extra": "^11.2.0",
     "sscaff": "^2.0.388",
