@@ -1,4 +1,4 @@
-import { Workflow, Job, Step, Action, synth, actions } from 'akshon';
+import { Workflow, Job, Step, Action, actions } from 'akshon';
 
 const workflowProps = {
   name: 'build',
@@ -22,4 +22,4 @@ actions.checkoutV5(buildJob)
 
 workflow.addJob('build', buildJob);
 
-const yaml = synth(workflow);
+workflow.synth();
